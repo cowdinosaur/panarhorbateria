@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   </head>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Welcome, <%=session.name%></a>
@@ -30,10 +31,27 @@
   <body style="width:100vw;padding:" class="text-center">
       <h6>This is the start of chat history</h6>
       <div style="padding-left:10%;padding-right:10%;"><hr class="mt-2"></div>
-      <div class="othermessage"><div class="messageauthor">Jack</div><br><div class="messagecontent">Hi there!</div></div>
-      <div class="othermessage"><div class="messageauthor">Jack</div><br><div class="messagecontent">I'm the science centre bot from 2025(Much better than Jamie :)), I'll help plan your itinerary. What's your age?</div></div>
-     <div class="mymessage"><div class="messagecontent"><button type="button" class="btn btn-outline-primary mx-4">8-10</button><button type="button" class="btn btn-outline-primary mx-4">11-12</button></div></div>
+      <div class="othermessage" id="mess1" style="display:none;"><div class="messageauthor">Bot of 2025</div><br><div class="messagecontent">Hi there!</div></div>
+      <div class="othermessage" id="mess2" style="display:none;"><div class="messageauthor">Bot of 2025</div><br><div class="messagecontent">I'm the science centre bot from 2025, much better than Jamie. I'll help plan your itinerary. What's your age?</div></div>
+      <div class="mymessage" id="mess3" style="display:none;text-align:left;"><div class="messagecontent"><input type="number" class="form-control" placeholder="Your age" id="age"></div><button type="submit" class="m-0 btn btn-primary" tyle="float:left;" onclick="agedone()"><i class="fas fa-paper-plane"></i></button></div>
+      <div class="othermessage" id="mess4" style="display:none;"><div class="messageauthor">Bot of 2025</div><br><div class="messagecontent">Okay! What are your interest?</div></div>
+      <div class="mymessage" id="mess5" style="display:none;text-align:left;"><button type="submit" class="m-0 btn btn-outline-primary btn-primary mx-2" style="float:left;" onclick="idone('tech')"><i class="fas fa-cogs"></i> Technology</button><button type="submit" class="m-0 btn btn-outline-primary btn-primary mx-2" style="float:left;" onclick="idone('phy')"><i class="fas fa-atom"></i> Physics</button><button type="submit" class="m-0 btn btn-outline-primary btn-primary mx-2" style="float:left;" onclick="idone('chem')"><i class="fas fa-flask"></i> Chemistry</button></div>
+      <div class="othermessage" id="mess6" style="display:none;"><div class="messageauthor">Bot of 2025</div><br><div class="messagecontent">Great, I love <p class="d-inline" id="subject"></p> too! Is this your first time here?</div></div>
   </body>
   <script>
+    $("#mess1").fadeIn(1000)
+    $("#mess2").fadeIn(2500)
+    $("#mess3").fadeIn(3000)
+    function agedone(){
+      console.log($("#age").val())
+      let age = $("#age").val()
+      $("#mess4").fadeIn(1000)
+      $("#mess5").fadeIn(1500)
+    }
+    function idone(data){
+      let subdict = {chem: "chemistry", tech: "technology", phy: "physics"}
+      $("#subject").html(subdict[data])
+      $("#mess6").fadeIn(1000)
+    }
   </script>
 </html>
