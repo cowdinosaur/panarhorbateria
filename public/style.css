@@ -1,0 +1,47 @@
+.fameimg{
+     margin:0 auto;
+     float:none;
+     margin-bottom:20px;
+}
+ .mymessage{
+     padding:10px;
+     min-height:35px;
+     margin-right:1%;
+     border-radius:5px;
+     width:50%;
+     float:right;
+     background:#e1f6ca;
+     margin-bottom:20px;
+}
+ .othermessage{
+     padding:10px;
+     margin-left:1%;
+     border-radius:5px;
+     width:50%;
+     float:left;
+     background:#e4ddd6;
+     margin-bottom:20px;
+}
+ .chatinfo{
+     padding:10px;
+     min-height:35px;
+     max-width:37.5%;
+     border-radius:20px;
+     float:right;
+     background:#e4f3fa;
+     width:50%;
+}
+ .mymessage > .messagecontent{
+     float:left;
+}
+ .othermessage > .messageauthor{
+     float:left;
+     color:#00CED1;
+}
+ .othermessage > .messagecontent{
+     float:left;
+}
+ .othermessage > .notify{
+     float:none;
+     text-align:center;
+}
