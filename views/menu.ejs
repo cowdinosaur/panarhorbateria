@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to MySciCentre!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://www.science.edu.sg/images/default-source/default-album/scs-logo.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <style>
+      .mymessage{
+       padding:10px;
+       min-height:35px;
+       margin-right:1%;
+       border-radius:5px;
+       width:50%;
+       float:right;
+       background:#e1f6ca;
+       margin-bottom:20px;
+      }
+      .othermessage{
+           padding:10px;
+           margin-left:1%;
+           border-radius:5px;
+           width:50%;
+           float:left;
+           background:#e4ddd6;
+           margin-bottom:20px;
+      }
+      .chatinfo{
+           padding:10px;
+           min-height:35px;
+           max-width:37.5%;
+           border-radius:20px;
+           float:right;
+           background:#e4f3fa;
+           width:50%;
+      }
+      .mymessage > .messagecontent{
+           float:left;
+      }
+      .othermessage > .messageauthor{
+           float:left;
+           color:#00CED1;
+      }
+      .othermessage > .messagecontent{
+           float:left;
+      }
+      .othermessage > .notify{
+           float:none;
+           text-align:center;
+      }
+    </style>
+  </head>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Welcome, <%=session.name%></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="/menu">Menu</a>
+          <a class="nav-item nav-link" href="/chat">Get a Itinerary</a>
+          <a class="nav-item nav-link" href="/code">Get a Exhibit</a>
+        </div>
+      </div>
+    </nav>
+  <body style="width:100vw;padding:" class="text-center">
+     <img src="https://www.science.edu.sg/images/default-source/default-album/scs-logo.png">
+    <h1 class="mt-4">What's new:</h1>
+    <h4>New <i>diversity</i> exhibition at floor 2.</h4>
+  </body>
+  <script>
+  </script>
+</html>
