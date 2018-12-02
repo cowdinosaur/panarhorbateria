@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Welcome to MySciCentre!</title>
+    <title>MySciCentre!</title>
     <meta name="description" content="A cool thing made with Glitch">
     <link id="favicon" rel="icon" href="https://www.science.edu.sg/images/default-source/default-album/scs-logo.png" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MDB core JS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.15/css/mdb.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.15/js/mdb.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   </head>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Welcome, <%=session.name%></a>
@@ -22,18 +26,58 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-item nav-link active" href="/menu">Menu</a>
-          <a class="nav-item nav-link" href="/chat">Get a Itinerary</a>
-          <a class="nav-item nav-link" href="/code">Get a Exhibit</a>
+          <a class="nav-item nav-link" href="/chat">Get an Itinerary</a>
+          <a class="nav-item nav-link" href="/code">Check your Understanding</a>
         </div>
       </div>
     </nav>
   <body style="width:100vw;padding:" class="text-center">
       <h6>This is the start of chat history</h6>
       <div style="padding-left:10%;padding-right:10%;"><hr class="mt-2"></div>
-      <div class="othermessage"><div class="messageauthor">Jack</div><br><div class="messagecontent">Hi there!</div></div>
-      <div class="othermessage"><div class="messageauthor">Jack</div><br><div class="messagecontent">I'm the science centre bot from 2025(Much better than Jamie :)), I'll help plan your itinerary. What's your age?</div></div>
-     <div class="mymessage"><div class="messagecontent"><button type="button" class="btn btn-outline-primary mx-4">8-10</button><button type="button" class="btn btn-outline-primary mx-4">11-12</button></div></div>
+      <div class="othermessage" id="mess1" style="display:none;"><div class="messageauthor">Bot of 2025</div><br><div class="messagecontent">Hi there!</div></div>
+      <div class="othermessage" id="mess2" style="display:none;"><div class="messageauthor">Bot of 2025</div><br><div class="messagecontent" style="text-align:left;">I'm the science centre bot from 2025, much better than Jamie. I'll help plan your itinerary. What's your age?</div></div>
+      <div class="mymessage" id="mess3" style="display:none;text-align:left;"><div class="messagecontent">
+        <div class="input-group">
+          <input type="number" class="form-control" placeholder="Your age" id="age" style="height:100%">
+          <span class="input-group-btn">
+            <button type="submit" class="m-0 btn btn-primary btn-sm" tyle="float:left;" onclick="agedone()" style="height:90%"><i class="fas fa-paper-plane"></i></button>
+          </span>
+        </div>
+        </div></div></div>
+      <div class="othermessage" id="mess4" style="display:none;"><div class="messageauthor">Bot of 2025</div><br><div class="messagecontent">Okay! What are your interest?</div></div>
+      <div class="mymessage" id="mess5" style="display:none;text-align:left;">
+        <div class="row">
+          <button type="submit" class="m-0 btn btn-outline-primary btn-primary mx-2 my-2" style="float:left;" onclick="idone('tech')"><i class="fas fa-cogs"></i> Technology</button>
+          <button type="submit" class="m-0 btn btn-outline-primary btn-primary mx-2 my-2" style="float:left;" onclick="idone('phy')"><i class="fas fa-atom"></i> Physics</button>
+          <button type="submit" class="m-0 btn btn-outline-primary btn-primary mx-2 my-2" style="float:left;" onclick="idone('bio')"><i class="fas fa-microscope"></i> Biology</button>
+          <button type="submit" class="m-0 btn btn-outline-primary btn-primary mx-2 my-2" style="float:left;" onclick="idone('chem')"><i class="fas fa-flask"></i> Chemistry</button>
+        </div></div>
+      <div class="othermessage" id="mess6" style="display:none;"><div class="messageauthor">Bot of 2025</div><br><div class="messagecontent">Great, I love <p class="d-inline" id="subject"></p> too! Are you ready to go?</div></div>
   </body>
   <script>
+    let age = 0
+    let subject = ""
+    $("#mess1").fadeIn(1000, function(){
+      $("#mess2").fadeIn(1000, function(){
+        $("#mess3").fadeIn(1000)
+      })
+    })
+    function agedone(){
+      console.log($("#age").val())
+      age = $("#age").val()
+      $("#mess4").fadeIn(1000, function(){
+        $("#mess5").fadeIn(1000)
+      })
+    }
+    function idone(data){
+      subdict = {chem: "Chemistry", tech: "Technology", phy: "Physics", bio:"Biology"}
+      $("#subject").html(subdict[data])
+      subject = subdict[data]
+      $("#mess6").fadeIn(1000, function(){
+        setTimeout(function(){
+          window.location.href = '/saveset?&age='+encodeURI(age)+'&interest='+encodeURI(subject);
+        }, 1000)
+      })
+    }
   </script>
 </html>

@@ -1,5 +1,5 @@
 {
-  "name": "hello-express",
+  "name": "sci2025",
   "version": "0.0.1",
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
@@ -7,12 +7,15 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.16.4",
     "express-session": "^1.15.6",
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "uuid": "^3.3.2",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.2.0",
+    "sequelize": "^4.41.2",
+    "sqlite3": "^4.0.4",
+    "csvtojson": "^2.0.8"
   },
   "engines": {
     "node": "10.x"
