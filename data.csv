@@ -1,0 +1,15 @@
+type,name,description,interests,min_age,max_age,est_time,code
+Exhibition,"CLIMATE CHANGE CLIMATE CHALLENGE
+",Find out what life will be like as a result of climate change and global warming,CHEM,1,100,45,DF2J4
+Exhibition,PHOBIA: THE SCIENCE OF FEAR,Face your fears in an exciting journey of self-discovery ,BIO,10,15,60,NA97W
+Exhibition,LASER MAZE CHALLENGE,Harness your inner Ninja and test your reflexes in a field of laser beams!,TECH,7,100,20,N32CF
+Exhibition,ButterFly's Up-Close,see Butterfly's Up-close. see how they will fly and even see how they eat and even they nature.,BIO,7,100,60,N32CF
+Workshop,SCIENCE 2025,Towards Science Communication for SG60,TECH,7,20,0,N32CF
+Exhibition,BIOTHETICS,"Explore issues such as genetic modification, organ transplants and cloning","BIO, TECH",12,19,30,N32CF
+Exhibition,FIRE,"What happens when something burns? How does nature depend on fire? Learn how matches, lighters and firecrackers work!","CHEM, PHY",1,100,30,N32CF
+Exhibition,The Mind's Eye,The MInd's Eye is a exhibition wich is an iteractive stall which can be taken and then trick the eye to seing something unormal.,BIO,12,100,30,N32CF
+Exhibition,Marine Alcove,"See Marinelife Up-Clos, listen to underwater symphony and control an underwater camera",BIO,1,100,30,N32CF
+Exhibition,WaterWorks,Have fun while seeing how waterworks and play with them.,PHY,7,12,30,N32CF
+Workshop,Bacteria Outbreak,A Outbreak of a virus bacteria. so to fix it we need to learn about it,BIO,1,100,0,N32CF
+Workshop,Blast Off!,Learn about rocket Science and build your own rocket and Blast Off!,PHY,7,14,0,N32CF
+Workshop,Fuel Cells,"Fuel cells hold great promise in today's global relentless search for new demand and supply of clean energy. In this workshop, participants will learn about the different fuel cell technologies and gain insight into the working principles of Alkaline and Proton Exchange Membrane (PEM) fuel cells.",CHEM,14,18,0,N32CF
